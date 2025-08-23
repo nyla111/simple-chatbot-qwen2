@@ -25,10 +25,6 @@ This project packages the Qwen/Qwen2-0.5B-Instruct model into a RESTful API usin
 ## Installation
 
 1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd <repository-directory>
-   ```
 
 2. **Create virtual environment**
    ```bash
