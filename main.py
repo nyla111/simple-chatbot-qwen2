@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from model_loader import model, tokenizer
 import uvicorn
+import torch
 
 app = FastAPI(title="Qwen2-0.5B Chat API")
 
@@ -25,7 +26,7 @@ def read_root():
 @app.post("/chat/")
 async def chat_with_model(request: ChatRequest):
     try:
-        print(f"🤖 User asked: {request.message}")
+        print(f"User asked: {request.message}")
         
         # Build messages in chat format
         messages = []
@@ -62,7 +63,7 @@ async def chat_with_model(request: ChatRequest):
         response_ids = outputs[0][len(inputs.input_ids[0]):]
         response = tokenizer.decode(response_ids, skip_special_tokens=True)
         
-        print(f"🤖 Model responded: {response}")
+        print(f"Model responded: {response}")
         
         # Update history
         updated_history = request.history + [[request.message, response]]
@@ -73,7 +74,7 @@ async def chat_with_model(request: ChatRequest):
         }
 
     except Exception as e:
-        print(f"💥 ERROR: {type(e).__name__}: {e}")
+        print(f"ERROR: {type(e).__name__}: {e}")
         import traceback
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
