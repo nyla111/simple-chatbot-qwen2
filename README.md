@@ -1,4 +1,4 @@
-# 🤖 Qwen Chatbot API Deployment
+# Qwen Chatbot API Deployment
 
 A complete solution for deploying the Qwen language model as a chatbot API with a web interface, using FastAPI and ngrok for public access.
 
@@ -9,7 +9,7 @@ This project packages the Qwen/Qwen2-0.5B-Instruct model into a RESTful API usin
 ## Features
 
 - **FastAPI Backend**: Robust and scalable API server
-- **Qwen2-0.5B Model**: Lightweight yet powerful language model
+- **Qwen2.5-3B-Instruct**: Lightweight yet powerful language model
 - **Web Interface**: Beautiful, responsive chat UI
 - **Public Access**: ngrok integration for instant public sharing
 - **CORS Enabled**: Cross-origin requests supported
