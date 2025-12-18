@@ -223,6 +223,3 @@ This project uses the Qwen model which has its own license terms. Please check t
 
 ---
 
-**Happy Chatbot Building!** 🚀
-
-For questions or support, please open an issue in the GitHub repository.
